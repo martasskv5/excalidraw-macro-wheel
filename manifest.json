@@ -1,0 +1,10 @@
+{
+    "id": "excalidraw-macro-wheel",
+    "name": "Excalidraw Macro Wheel",
+    "version": "1.0.0",
+    "minAppVersion": "1.0.0",
+    "description": "A radial macro wheel for Excalidraw.",
+    "author": "martasskv5",
+    "authorUrl": "",
+    "isDesktopOnly": true
+}

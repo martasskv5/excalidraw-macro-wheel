@@ -1,0 +1,49 @@
+#excalidraw-macro-wheel-container {
+    position: absolute; /* Changed from fixed to absolute */
+    z-index: 99999;
+    pointer-events: none;
+    display: none;
+    width: 360px;
+    height: 360px;
+}
+
+#excalidraw-macro-wheel-container svg {
+    pointer-events: auto;
+    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.6));
+    overflow: visible;
+}
+
+/* Smooth transitions for wedges */
+.macro-wedge path {
+    transition:
+        fill 0.15s ease,
+        opacity 0.15s ease;
+}
+
+.macro-wedge:hover path {
+    opacity: 0.85;
+}
+
+/* Smooth transitions for icons */
+.macro-wedge svg {
+    transition: stroke 0.15s ease;
+}
+
+/* Slider interactions */
+.slider-knob {
+    transition:
+        transform 0.1s ease,
+        r 0.1s ease;
+    cursor: grab;
+}
+
+.slider-knob:active {
+    cursor: grabbing;
+    transform: scale(1.2);
+}
+
+/* Prevent the inner text from being selected while dragging */
+#excalidraw-macro-wheel-container text {
+    user-select: none;
+    pointer-events: none;
+}
